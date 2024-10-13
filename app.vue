@@ -19,4 +19,10 @@ body {
   font-family: 'inter' !important;
   overflow-x: hidden;
 }
+
+
+a {
+  text-decoration: none;
+  color: black
+}
 </style>

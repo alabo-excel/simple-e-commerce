@@ -26,6 +26,7 @@
         <button class="btn">Proceed to checkout</button>
       </div>
     </div>
+    <Explore />
   </div>
 </template>
 

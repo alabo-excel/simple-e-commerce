@@ -33,7 +33,7 @@ onMounted(async () => {
   }
 });
 </script>
-<style scoped>
+<style>
 .home {
   padding: 20px 60px;
 }

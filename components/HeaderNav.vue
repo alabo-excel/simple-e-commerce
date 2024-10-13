@@ -21,7 +21,7 @@
       </div>
       <NuxtLink href="/cart" class="buttons">
         <div class="buttons">
-          <div class="count"> {{ totalQuantity }} </div>
+          <div v-if="totalQuantity || totalQuantity >= 1" class="count"> {{ totalQuantity }} </div>
           <img src="/assets/cart.png" alt="">
           <p>Cart</p>
         </div>
@@ -51,10 +51,6 @@ const totalQuantity = computed(() => cartStore.totalQuantity);
   justify-content: space-between;
 }
 
-a {
-  text-decoration: none;
-  color: black
-}
 
 .links p {
   margin: auto 15px;
@@ -115,7 +111,8 @@ a {
   .search {
     display: none;
   }
-  .hero{
+
+  .hero {
     padding: 1px 10px;
   }
 }

@@ -81,7 +81,7 @@ const removeData = () => {
 .cart-card img {
   width: 150px;
   height: 130px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 14px;
 }
 

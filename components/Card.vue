@@ -1,8 +1,10 @@
 <template>
   <div>
-    <img :src="product.image" :alt="product.title" class="product-image" />
-    <p class="title">{{ product.title }}</p>
-    <p class="price"> ${{ product.price }}</p>
+    <NuxtLink :href="`product/${product.id}`">
+      <img :src="product.image" :alt="product.title" class="product-image" />
+      <p class="title">{{ product.title }}</p>
+      <p class="price"> ${{ product.price }}</p>
+    </NuxtLink>
     <button @click="handleAddToCart" class="btn">Add to cart</button>
   </div>
 </template>
@@ -19,6 +21,7 @@ const props = defineProps({
 const cartStore = useCartStore();
 const handleAddToCart = () => {
   cartStore.addToCart(props.product);
+  alert("Product Added to Cart!")
 };
 </script>
 
@@ -31,7 +34,7 @@ const handleAddToCart = () => {
 .product-image {
   width: 100%;
   height: 306px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 
